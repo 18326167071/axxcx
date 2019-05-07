@@ -1,0 +1,15 @@
+<!--pages/black/black.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='black'>
+  <view wx:for='{{list}}' wx:for-index='index' wx:key='index' class='black-item' bindtap='goDetail' data-item='{{item}}'>
+    <view class='title' wx:if='{{item.subject}}'>对“{{item.subject}}”的处罚公示</view>
+    <view class='content' wx:if='{{item.unit}}'>
+      <view class='key'>决定部门:</view>
+      <view class='val'>{{item.unit}}</view>
+    </view>
+    <view class='content' wx:if='{{item.startDate}}'>
+      <view class='key'>列入日期:</view>
+      <view class='val'>{{filter.timeStr(item.startDate)}}</view>
+    </view>
+  </view>
+</view>

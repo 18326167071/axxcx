@@ -1,0 +1,26 @@
+<!--pages/checks/checks.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='checks'>
+  <view class='checks-box' wx:for='{{list}}' wx:for-index='index' wx:key='index'>
+    <view class='checks-list' wx:if='{{item.money}}'>
+      <view class='key'>合同金额</view>
+      <view class='val'>{{item.money}}万元</view>
+    </view>
+    <view class='checks-list' wx:if='{{item.area}}'>
+      <view class='key'>项目面积</view>
+      <view class='val'>{{item.area}}平方米</view>
+    </view>
+    <view class='checks-list' wx:if='{{item.grantAt}}'>
+      <view class='key'>发证日期</view>
+      <view class='val'>{{filter.timeStr(item.grantAt)}}</view>
+    </view>
+    <view class='checks-list' wx:if='{{item.code}}'>
+      <view class='key'>许可证编号</view>
+      <view class='val'>{{item.code}}</view>
+    </view>
+    <view class='checks-list' wx:if='{{item.pCode}}'>
+      <view class='key'>省级许可证编号</view>
+      <view class='val'>{{item.pCode}}</view>
+    </view>
+  </view>
+</view>

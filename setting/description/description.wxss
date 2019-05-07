@@ -1,0 +1,55 @@
+/* setting/description/description.wxss */
+.description{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f8fa;
+  overflow-y: auto;
+}
+.description>.top{
+  background-color: #fff;
+  overflow: hidden;
+}
+.description>.top>image{
+  display: block;
+  width: 275rpx;
+  height: 104rpx;
+  margin: 60rpx auto 0;
+}
+.description>.top>.text{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 30rpx;
+  line-height: 1.5;
+  font-size: 28rpx;
+  color: #666;
+}
+.description>.list>.list-item{
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+}
+.description>.list>.list-item>.title{
+  line-height: 1;
+  font-size: 32rpx;
+  color: #333;
+  padding-left: 16rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+.description>.list>.list-item>.title:before{
+  content: '';
+  display: block;
+  width: 6rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 2rpx;
+  left: 0;
+  background-color: #44c98b;
+}
+.description>.list>.list-item>.content{
+  line-height: 1.5;
+  font-size: 28rpx;
+  color: #666;
+}

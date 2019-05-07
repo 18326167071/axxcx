@@ -1,0 +1,26 @@
+<!--login/login/login.wxml-->
+<view class='login'>
+  <image src='/static/images/logo_normal.png'></image>
+  <!-- 输入手机号 -->
+  <view class='phone'>
+    <input name="phone" placeholder='请输入手机号' placeholder-class='all-input' bindinput='addPhone'></input>
+  </view>
+  <!-- 滑块 -->
+  <view class='tap-line'>
+    <text>向右滑动后点击获取验证码</text>
+    <view class='success' style='width:{{numLeft}}px'><text wx:if='{{goSuccess}}'>通过验证请获取验证码</text></view>
+    <view class='white' wx:if='{{goOn}}' style='left:{{iconLeft}}px'></view>
+    <view class='tap-item' catchtouchmove='moveFun' catchtouchend='endFun' style='left:{{iconLeft}}px'>
+      <image src='/static/icon/login_start_icon.png' wx:if='{{!goSuccess}}'></image>
+      <image src='/static/icon/login_success_icon.png' wx:if='{{goSuccess}}'></image>
+    </view>
+  </view>
+  <!-- 验证码 -->
+  <view class='code'>
+    <input name="code" placeholder='请输入验证码' placeholder-class='all-input' bindinput='addCode'></input>
+    <view class='get-code {{getCode ? "active" : ""}}' bindtap='goCode'>{{codeText}}</view>
+  </view>
+  <!-- 确定绑定 -->
+  <view class='btn {{isMobile ? "active" : ""}}' bindtap='changeInfoMobile'>确定绑定</view>
+  <view class='note'>若您输入的手机号未注册，将为您直接注册</view>
+</view>

@@ -1,0 +1,24 @@
+var timeStr = function(str){
+  str = str.slice(0,10);
+  return str;
+}
+
+var htmlStr = function (str) {
+  if (str.indexOf('html') != -1) str = str.slice(0, -5);
+  return str;
+}
+
+var cardStr = function (str) {
+  if (str.indexOf('*') == -1) {
+    var str = str.split('')
+    str.splice(5, 6, '*', '*', '*', '*', '*', '*');
+    str = str.join('');
+  }
+  return str;
+}
+
+module.exports = {
+  timeStr: timeStr,
+  htmlStr: htmlStr,
+  cardStr: cardStr
+}

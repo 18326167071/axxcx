@@ -1,0 +1,18 @@
+<!--pages/constructions/constructions.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='constructions'>
+  <view class='constructions-item' wx:for='{{list}}' wx:for-index='index' wx:key='index'>
+    <view class='list' wx:if='{{item.certificateCode}}'>
+      <view class='key'>施工图审查编号:</view>
+      <view class='val'>{{item.certificateCode}}</view>
+    </view>
+    <view class='list' wx:if='{{item.checkUnit}}'>
+      <view class='key'>审查机构名称:</view>
+      <view class='val'>{{item.checkUnit}}</view>
+    </view>
+    <view class='list' wx:if='{{item.finishAt}}'>
+      <view class='key'>审查完成时间:</view>
+      <view class='val'>{{filter.timeStr(item.finishAt)}}</view>
+    </view>
+  </view>
+</view>

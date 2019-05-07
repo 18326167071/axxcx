@@ -1,0 +1,182 @@
+<!--company/search/search.wxml-->
+<view class='company-search'>
+  <!-- 企业地区 -->
+  <view class='search-area'>
+    <view class='title'>
+      <image src='/static/icon/search_area.png'></image>
+      <text>注册属地</text>
+    </view>
+    <view class='content'>
+      <picker mode="multiSelector" bindcolumnchange="inputArea" value="{{areaIndex}}" range="{{area}}">
+      　　<view class="picker">
+            <view class='area'>{{area[0][areaIndex[0]]}}<image src='/static/icon/search_more.png' class='arrow'></image></view>
+          </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 企业资质 -->
+  <view class='search-aptitude'>
+    <view class='title'>
+      <image src='/static/icon/search_aptitude.png'></image>
+      <text>资质类别</text>
+    </view>
+    <view class='content'>
+      <picker mode="multiSelector" wx:for='{{aptitudeList}}' wx:for-index="index" wx:key='index' bindcolumnchange='inputAptitude' value='{{aptitudeIndexList[index]}}' range='{{aptitudeList[index]}}' data-data='{{aptitudeDetailList[index]}}'>
+        <view class="picker">
+          {{aptitudeList[index][0][aptitudeIndexList[index][0]]}} 
+          <image src='/static/icon/search_more.png' class='arrow'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='footer'>
+      <view class='add' bindtap='aptitudeAdd'>加入条件</view>
+      <view class='look' wx:if='{{aptitudeChooseList.length}}' bindtap='showChooseBox'>
+        <image src='/static/icon/serach_look.svg'></image>
+        <text>查看</text>
+      </view>
+      <view class='num' wx:if='{{aptitudeChooseList.length}}'>已选择<text>{{aptitudeChooseList.length}}</text>项条件</view>
+    </view>
+  </view>
+  <!-- 企业人员 -->
+  <view class='search-people'>
+    <view class='title'>
+      <image src='/static/icon/search_people.png' class='people'></image>
+      <text>企业人员</text>
+    </view>
+    <view class='content'>
+      <picker mode="multiSelector" wx:for='{{peopleList}}' wx:for-index="index" wx:key='index' bindcolumnchange='inputpeople' value='{{peopleIndexList[index]}}' range='{{peopleList[index]}}' data-data='{{peopleDetailList[index]}}'>
+        <view class="picker">
+          {{peopleList[index][0][peopleIndexList[index][0]]}} 
+          <image src='/static/icon/search_more.png' class='arrow'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='footer'>
+      <view class='add' bindtap='peopleAdd'>加入条件</view>
+      <view class='look' wx:if='{{peopleChooseList.length}}' bindtap='showPeopleChooseBox'>
+        <image src='/static/icon/serach_look.svg'></image>
+        <text>查看</text>
+      </view>
+      <view class='num' wx:if='{{peopleChooseList.length}}'>已选择<text>{{peopleChooseList.length}}</text>项条件</view>
+    </view>
+  </view>
+  <!-- 项目时间 -->
+  <view class='search-other'>
+    <view class='title'>
+      <image src='/static/icon/search_time.png' class='time'></image>
+      <text>项目时间</text>
+      <text class='fr' bindtap='cancelTime'>重置</text>
+    </view>
+    <view class='time'>
+      <picker mode="date" bindchange="inputStartTime" value="{{startTime}}" start="1990-01-01" end="{{endTime || endDate}}">
+      　　<view class="picker">
+            <view class='area'><view wx:if="{{startTime == ''}}">开始时间</view><text>{{startTime}}</text></view>
+          </view>
+      </picker>
+      <view class='line'></view>
+      <picker mode="date" bindchange="inputEndTime" value="{{endTime}}" start="{{startTime}}"  end="{{endDate}}">
+      　　<view class="picker">
+            <view class='area'><view wx:if="{{endTime == ''}}">结束时间</view><text>{{endTime}}</text></view>
+          </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 项目金额 -->
+  <view class='search-other'>
+    <view class='title'>
+      <image src='/static/icon/search_money.png' class='money'></image>
+      <text>项目金额</text>
+    </view>
+    <view class='content'>
+      <picker mode="multiSelector" bindcolumnchange="inputMoney" value="{{moneyIndex}}" range="{{money}}">
+      　　<view class="picker">
+            <view class='area'>{{money[0][moneyIndex[0]]}}<image src='/static/icon/search_more.png' class='arrow'></image></view>
+          </view>
+      </picker>
+    </view>
+  </view>
+  <!-- 开始查询 -->
+  <view class='sure'>
+    <view bindtap='goSearch'>开始查询</view>
+  </view>
+  <!-- 已选条件 -->
+  <view class='choose' wx:if='{{showPeopleChoose}}'>
+    <view class='choose-box'> 
+      <view class='title'>已选择条件</view>
+      <view class='content'>
+        <view wx:for='{{peopleChooseList}}' wx:index='index' wx:key='index'>
+          <view class='top'>
+            <view class='left'>专业条件{{index+1}}</view>
+            <view class='right' data-delete='{{index}}' bindtap='deletePeopleChoose'>
+              <image src='/static/icon/search_delete.png'></image>
+              <view>删除</view>
+            </view>
+          </view>
+          <view class='bottom'>
+            <view wx:for-items='{{item}}' wx:for-item='items' wx:index='ind' wx:key='ind'>{{items}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='close' bindtap='closePeopleChooseBox'>
+        <image src='/static/icon/search_close.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 已选条件 -->
+  <view class='choose' wx:if='{{showChoose}}'>
+    <view class='choose-box'> 
+      <view class='title'>已选择条件</view>
+      <view class='content'>
+        <view wx:for='{{aptitudeChooseList}}' wx:index='index' wx:key='index'>
+          <view class='top'>
+            <view class='left'>资质条件{{index+1}}</view>
+            <view class='right' data-delete='{{index}}' bindtap='deleteChoose'>
+              <image src='/static/icon/search_delete.png'></image>
+              <view>删除</view>
+            </view>
+          </view>
+          <view class='bottom'>
+            <view wx:for-items='{{item}}' wx:for-item='items' wx:index='ind' wx:key='ind'>{{items}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='close' bindtap='closeChooseBox'>
+        <image src='/static/icon/search_close.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 授权弹窗 -->
+  <view class='container popup' wx:if="{{loginPop}}">
+    <view class='popup-box'>
+      <view class='box-title'>
+        <text>登录或绑定</text>
+      </view>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <image src='/static/icon/icon_weixin.png'></image>
+        <text>微信账号快速登录</text>
+      </button>
+      <view class='btn' bindtap='goBind'>
+        <image src='/static/icon/icon_shouji_denglu.png'></image>
+        <text>手机号绑定</text>
+      </view>
+    </view>
+  </view>
+  <!-- 会员卡弹窗 -->
+  <view class='vip popup' wx:if='{{isVip && !loginPop}}'>
+    <view class='vip-box'>
+      <image src='/static/images/vip_popup.png'></image>
+      <view class='card-btn' bindtap='goCard'>查看我的礼劵</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closeVip'></image>
+    </view>
+  </view>
+  <!-- 会员卡过期弹窗 -->
+  <view class='done-vip popup' wx:if='{{isDoneVip}}'>
+    <view class='done-vip-box'>
+      <view>您的7天VIP会员体验卡已到期</view>
+      <view>因您是“鲸查”首批用户</view>
+      <view>我们已免费为您升级成会员</view>
+      <view>资质/项目/招标信息尽情查</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closeDoneVip'></image>
+    </view>
+  </view>
+</view>

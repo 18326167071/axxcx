@@ -1,0 +1,97 @@
+  <!--首页-->
+  <view class="container">
+  <!-- 顶部logo块 -->
+  <view class='top'>
+    <image src='/static/images/logo_white.png'></image>
+    <view class='search'>
+      <view bindtap='goCompanySearch'>
+        <image src='/static/icon/index_search.png'></image>
+        <text>查询相关企业</text>
+      </view>
+    </view>
+    <view class='num'>
+      <view class='num-item'>
+        <text class='num'>{{num.company || '-'}}万+</text>
+        <text class='text'>覆盖企业</text>
+      </view>
+      <view class='line'></view>
+      <view class='num-item'>
+        <text class='num'>{{num.success || '-'}}万+</text>
+        <text class='text'>中标数据</text>
+      </view>
+      <view class='line'></view>
+      <view class='num-item'>
+        <text class='num'>{{num.personal || '-'}}万+</text>
+        <text class='text'>人员信息</text>
+      </view>
+      <view class='line'></view>
+      <view class='num-item'>
+        <text class='num'>{{num.today || '-'}}万+</text>
+        <text class='text'>今日更新</text>
+      </view>
+    </view>
+  </view>
+  <!-- 中部导航条 -->
+  <view class='nav'>
+    <view class='nav-item' wx:for='{{iconList}}' wx:index='index' wx:key='{{item.id}}' data-route='{{item.route}}' bindtap='goOther'>
+      <view class='nav-val'>
+        <image src='{{item.icon_image}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 推荐企业 -->
+  <view class='company'>
+    <text class='title'>企业推荐</text>
+    <view class='company-list'>
+      <view wx:for='{{list}}' wx:key='{{item.id}}' class='list-item' bindtap='goDetail' data-name='{{item.name}}'>
+        <view class='title'>
+          <image src='/static/icon/company_company.png'></image>
+          {{item.name}}
+        </view>
+        <view class='num'>
+          <image src='/static/icon/company_num.png'></image>
+          <view>资质<text>{{item.qualifications.length}}</text>个</view>
+          <view>人员<text>{{item.personCount}}</text>个</view>
+          <view>项目<text>{{item.projectCount}}</text>个</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 触底提示
+  <view class='footer'>我是有底线的</view> -->
+  <!-- 授权弹窗 -->
+  <view class='container popup' wx:if="{{loginPop}}">
+    <view class='popup-box'>
+      <view class='box-title'>
+        <text>登录或绑定</text>
+      </view>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <image src='/static/icon/icon_weixin.png'></image>
+        <text>微信账号快速登录</text>
+      </button>
+      <view class='btn' bindtap='goBind'>
+        <image src='/static/icon/icon_shouji_denglu.png'></image>
+        <text>手机号绑定</text>
+      </view>
+    </view>
+  </view>
+  <!-- 获取7天会员体验卡弹窗 -->
+  <view class='vip popup' wx:if='{{isVip && !loginPop}}'>
+    <view class='vip-box'>
+      <image src='/static/images/vip_popup.png'></image>
+      <view class='card-btn' bindtap='goCard'>查看我的礼劵</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closeVip'></image>
+    </view>
+  </view>
+  <!-- 7天会员卡过期弹窗 -->
+  <view class='done-vip popup' wx:if='{{isDoneVip}}'>
+    <view class='done-vip-box'>
+      <view>您的7天VIP会员体验卡已到期</view>
+      <view>因您是“鲸查”首批用户</view>
+      <view>我们已免费为您升级成会员</view>
+      <view>资质/项目/招标信息尽情查</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closeDoneVip'></image>
+    </view>
+  </view>
+</view>

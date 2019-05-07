@@ -1,0 +1,100 @@
+/* pages/person/person.wxss */
+.person-item{
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+  overflow: hidden;
+}
+.person-item>.title{
+  font-size: 32rpx;
+  width: 100%;
+  color: #333;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  line-height: 1;
+}
+.person-item>.title>.key{
+  float: left;
+}
+.person-item>.title>.val{
+  float: left;
+  font-size: 28rpx;
+  color: #666;
+  margin-left: 20rpx;
+  margin-top: 4rpx;
+  line-height: 1;
+}
+.person-item>.content{
+  margin-top: 30rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.person-item>.content>.key{
+  color: #999;
+  float: left;
+  letter-spacing: 2rpx;
+  margin-right: 12rpx;
+}
+.person-item>.content>.val{
+  color: #666;
+  float: left;
+  width: 75%;
+}
+.suggestion{
+  width: 100%;
+}
+.suggestion.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.suggestion-box{
+  width: 550rpx;
+  height: 360rpx;
+  margin: 0 auto;
+  margin-top: 40%;
+  position: relative;
+  box-sizing: border-box;
+  padding: 50rpx 30rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+.suggestion-box>.title{
+  font-size: 32rpx;
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
+}
+.suggestion-box>.suggestion-btn{
+  width: 330rpx;
+  height: 90rpx;
+  background-color: #44c98b;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  letter-spacing: 2rpx;
+}
+.suggestion-box>.close-btn{
+  display: block;
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  left: 264rpx;
+  top: 426rpx;
+}
+.suggestion.popup.text>.suggestion-box{
+  height: 280rpx;
+}
+.suggestion.popup.text>.suggestion-box>.close-btn{
+  top: 346rpx;
+}
+.suggestion.popup.text>.suggestion-box>.title>text{
+  color: #1859a0;
+}

@@ -1,0 +1,77 @@
+/* setting/about/about.wxss */
+.about{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f8fa;
+  overflow-y: auto;
+}
+.about>.top{
+  background-color: #fff;
+  overflow: hidden;
+}
+.about>.top>image{
+  width: 275rpx;
+  height: 104rpx;
+  margin: 60rpx auto 40rpx;
+  display: block;
+}
+.about>.top>.version{
+  line-height: 1;
+  padding-bottom: 40rpx;
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  position: relative;
+}
+.about>.top>.version:before{
+  content: '';
+  display: block;
+  width: 90rpx;
+  height: 2rpx;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: 14rpx;
+  left: calc(50% - 180rpx);
+}
+.about>.top>.version:after{
+  content: '';
+  display: block;
+  width: 96rpx;
+  height: 2rpx;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: 14rpx;
+  right: calc(50% - 180rpx);
+}
+.about>.list{
+  margin-top: 20rpx;
+  background-color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.about>.list>.list-item{
+  height: 104rpx;
+}
+.about>.list>.list-item:not(:last-child){
+  border-bottom: 2rpx solid #e9e9e9;
+}
+.about>.list>.list-item>.title{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 104rpx;
+  float: left;
+}
+.about>.list>.list-item>.content{
+  font-size: 32rpx;
+  color: #44c98b;
+  line-height: 104rpx;
+  float: right;
+}
+.about>.list>.list-item>image:last-child{
+  display: block;
+  width: 16rpx;
+  height: 32rpx;
+  float: right;
+  margin: 36rpx 0
+}

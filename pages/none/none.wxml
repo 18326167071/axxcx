@@ -1,0 +1,6 @@
+<!--pages/none/none.wxml-->
+<view class='none'>
+  <image src='/static/images/none.png'></image>
+  <view class='no-message'>暂时还没有相关信息哦</view>
+  <!-- <view class='concat-phone'>如有问题，请咨询<text bindtap='callPhone' data-phone="400-400-400">400-400-400</text></view> -->
+</view>

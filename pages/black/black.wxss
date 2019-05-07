@@ -1,0 +1,30 @@
+/* pages/black/black.wxss */
+.black-item{
+  padding: 40rpx 30rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+  overflow: hidden;
+}
+.black-item>.title{
+  font-size: 32rpx;
+  width: 100%;
+  color: #333;
+  line-height: 1.5;
+}
+.black-item>.content{
+  margin-top: 30rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.black-item>.content>.key{
+  color: #999;
+  float: left;
+  letter-spacing: 2rpx;
+  margin-right: 12rpx;
+}
+.black-item>.content>.val{
+  color: #666;
+  float: left;
+  width: 75%;
+}

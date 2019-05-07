@@ -1,0 +1,91 @@
+/* setting/star/star.wxss */
+.star{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f5f8fa;
+}
+/* 选项卡 */
+.star>.top{
+  box-sizing: border-box;
+  height: 90rpx;
+  border-bottom: 2rpx solid #e9e9e9;
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  color: #999;
+  font-size: 28rpx;
+  line-height: 90rpx;
+  padding: 0 30rpx;
+}
+.star>.top>.active{
+  color: #333;
+  border-bottom: 4rpx solid #44c98b;
+}
+/* 企业列表 && 公告列表 */
+.star>.list{
+  height: calc(100% - 90rpx);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.star .list-item{
+  height: 174rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  position: relative;
+}
+.star .list-item>.item{
+  width: 100%;
+  height: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  transition: all 400ms ease 100ms;
+  left: 0;
+}
+.star .list-item>.item.right{
+  left: -256rpx;
+}
+.star .list-item>.cancel{
+  position: absolute;
+  width: 256rpx;
+  height: 100%;
+  background-color: #ef6e50;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 174rpx;
+  left: 100vw;
+  top: 0;
+  transition: all 400ms ease 100ms;
+}
+.star .list-item>.cancel.right{
+  left: calc(100vw - 256rpx);
+}
+.star>.list>.list-item>.item>.title{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 1;
+  margin-top: 40rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.star>.list>.list-item>.item>.time{
+  font-size: 24rpx;
+  color: #999;
+  line-height: 1;
+  margin-top: 30rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.star>.list>.list-item>.item>.time>image{
+  display: block;
+  width: 24rpx;
+  height: 24rpx;
+  float: left;
+  margin-right: 12rpx;
+}

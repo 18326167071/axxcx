@@ -1,0 +1,59 @@
+/* pages/biddings/biddings.wxss */
+.biddings-item{
+  padding: 30rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+}
+.biddings-item>.title{
+  line-height: 1.5;
+  overflow: hidden;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  color: #333;
+}
+.biddings-item>.title>.key{
+  float: left;
+  width: 80%;
+}
+.biddings-item>.title>.val{
+  float: right;
+  font-size: 24rpx;
+  padding: 2rpx 10rpx;
+  border-radius: 4rpx;
+  border: 2rpx solid;
+  margin-top: 9rpx;
+}
+.biddings-item>.title>.val.active-one{
+  color: #4BCB8F;
+  border-color: #4BCB8F;
+}
+.biddings-item>.title>.val.active-two{
+  color: #F98F64;
+  border-color: #F98F64;
+}
+.biddings-item>.title>.val.active-three{
+  color: #58D0DE;
+  border-color: #58D0DE;
+}
+.biddings-item>.title>.val.active-four{
+  color: #7CBCF8;
+  border-color: #7CBCF8;
+}
+.biddings-item>.list{
+  line-height: 1.5;
+  overflow: hidden;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.biddings-item>.list:last-child{
+  margin-bottom: 0;
+}
+.biddings-item>.list>.key{
+  float: left;
+  color: #999;
+  margin-right: 10rpx;
+}
+.biddings-item>.list>.val{
+  float: left;
+  color: #666;
+}

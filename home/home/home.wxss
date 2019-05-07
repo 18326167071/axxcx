@@ -1,0 +1,341 @@
+/* home/home/home.wxss */
+/* 我的主页头部信息栏 */
+.home{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f8fa;
+  overflow-y: hidden;
+}
+.home>.top{
+  width: 100%;
+  height: 180rpx;
+  background-color: #44c98b;
+  overflow: hidden;
+}
+.home>.top>.no-message>image{
+  display: block;
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  float: left;
+  margin: 32rpx 30rpx;
+}
+.home>.top>.no-message>.info{
+  float: left;
+}
+.home>.top>.no-message>.info>.title{
+  color: #fff;
+  font-size: 40rpx;
+  font-weight: bold;
+  padding-left: 30rpx;
+  line-height: 80rpx;
+  margin-top: 20rpx;
+}
+.home>.top>.no-message>.info>.note{
+  color: #fff;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  line-height: 60rpx;
+}
+.home>.top>.message{
+  overflow: hidden;
+}
+.home>.top>.message>image{
+  display: block;
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  float: left;
+  margin: 32rpx 30rpx;
+}
+.home>.top>.message>.vip-name{
+  width: 216rpx;
+  margin-top: 32rpx;
+  float: left;
+}
+.home>.top>.message>.vip-name>.name{
+  font-size: 36rpx;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 12rpx;
+  line-height: 1;
+  width: 216rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.home>.top>.message>.vip-name>.vip{
+  margin-top: 20rpx;
+  font-size: 20rpx;
+  color: #333;
+  width: 100rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  text-align: center;
+  border-radius: 18rpx;
+  background-color: #eee;
+}
+.home>.top>.message>.vip-name>.look{
+  margin-top: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+  height: 36rpx;
+  line-height: 36rpx;
+  width: 350rpx;
+}
+.home>.top>.message>.vip-name>.vip.active{
+  background-color: #f6dd45;
+}
+.home>.top>.message>.vip-name>.vip>image{
+  display: inline-block;
+  width: 28rpx;
+  height: 24rpx;
+  vertical-align: middle;
+}
+.home>.top>.message>.company{
+  color: #fff;
+  line-height: 180rpx;
+  float: right;
+  width: 220rpx;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  position: relative;
+  font-size: 28rpx;
+  text-align: right;
+  padding-right: 60rpx;
+}
+.home>.top>.message>.company>image{
+  display: block;
+  width: 12rpx;
+  height: 24rpx;
+  position: absolute;
+  right: 30rpx;
+  top: calc(50% - 12rpx);
+}
+/* 我的主页设置列表 */
+.home>.item{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  background-color: #fff;
+}
+.home>.item>.list-item{
+  height: 104rpx;
+  overflow: hidden;
+}
+.home>.item>.list-item:not(:last-child){
+  border-bottom: 1px solid #e9e9e9;
+}
+.home>.item>.list-item>image:first-child{
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  float: left;
+  margin: 36rpx 0;
+}
+.home>.item>.list-item:nth-child(2)>image:first-child{
+  display: block;
+  width: 32rpx;
+  height: 32rpx;
+  float: left;
+  margin: 36rpx 0;
+} 
+.home>.item>.list-item:nth-child(3)>image:first-child{
+  height: 24rpx;
+  margin: 40rpx 0;
+}
+.home>.item>.list-item:last-child>image:first-child{
+  height: 28rpx;
+  margin: 38rpx 0;
+}
+.home>.item>.list-item>text{
+  display: block;
+  line-height: 104rpx;
+  font-size: 32rpx;
+  color: #333;
+  margin-left: 12rpx;
+  float: left;
+}
+.home>.item>.list-item>image:last-child{
+  display: block;
+  width: 16rpx;
+  height: 32rpx;
+  float: right;
+  margin: 36rpx 0
+}
+/* 水印 */
+.home>.note-box{
+  margin-top: 60rpx;
+}
+.home>.note-box>image{
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  margin: 0 auto;
+}
+.home>.note-box>view{
+  color: #999;
+  margin-top: 20rpx;
+  line-height: 30rpx;
+  font-size: 24rpx;
+  text-align: center;
+}
+/* 授权弹窗 */
+.container{
+  width: 100%;
+}
+.container.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.popup-box{
+  width: 600rpx;
+  height: 392rpx;
+  margin: 0 auto;
+  margin-top: 40%;
+  border-radius: 8rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+.popup-box .box-title{
+  line-height: 1;
+  font-size: 36rpx;
+  padding-top: 60rpx;
+  color: #333;
+  position: relative;
+  text-align: center;
+  padding-bottom: 10rpx;
+}
+.popup-box .box-title>image{
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.popup-box>.btn,.popup-box>button{
+  width: 500rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.popup-box>button{
+  background-color: #51a938;
+  border-color: #51a938;
+  color: #fff;
+}
+.popup-box>.btn{
+  border: 2rpx solid #eaecee;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  color: #666;
+}
+.popup-box>button>image{
+  display: block;
+  width: 40rpx;
+  height: 32rpx;
+  margin: 24rpx 20rpx;
+}
+.popup-box>.btn>image{
+  display: block;
+  width: 38rpx;
+  height: 38rpx;
+  margin: 21rpx 20rpx;
+}
+/* 会员卡弹窗 */
+.vip{
+  width: 100%;
+}
+.vip.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.vip-box{
+  width: 574rpx;
+  height: 626rpx;
+  margin: 0 auto;
+  margin-top: 20%;
+  position: relative;
+}
+.vip-box>image{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.vip-box>.card-btn{
+  width: 430rpx;
+  height: 90rpx;
+  background-color: #44c98b;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 60rpx;
+  left: 72rpx;
+  letter-spacing: 2rpx;
+}
+.vip-box>.close-btn{
+  display: block;
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  left: 264rpx;
+  top: 686rpx;
+}
+/* 会员卡弹窗 */
+.done-vip{
+  width: 100%;
+}
+.done-vip.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.done-vip-box{
+  width: 540rpx;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 40rpx;
+  top: 300rpx;
+  position: absolute;
+  left: 105rpx;
+  box-sizing: border-box;
+}
+.done-vip-box>view{
+  font-size: 32rpx;
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
+}
+.done-vip-box>.close-btn{
+  display: block;
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -23rpx;
+  top: 500rpx;
+}

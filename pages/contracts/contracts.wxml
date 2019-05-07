@@ -1,0 +1,30 @@
+<!--pages/contracts/contracts.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='contracts'>
+  <view class='contracts-box' wx:for='{{list}}' wx:for-index='index' wx:key='index'>
+    <view class='contracts-list' wx:if='{{item.type}}'>
+      <view class='key'>合同类别</view>
+      <view class='val'>{{item.type}}</view>
+    </view>
+    <view class='contracts-list' wx:if='{{item.money}}'>
+      <view class='key'>合同金额</view>
+      <view class='val'>{{item.money}}万元</view>
+    </view>
+    <view class='contracts-list' wx:if='{{item.contractAt}}'>
+      <view class='key'>签订日期</view>
+      <view class='val'>{{filter.timeStr(item.contractAt)}}</view>
+    </view>
+    <view class='contracts-list' wx:if='{{item.area}}'>
+      <view class='key'>实际面积</view>
+      <view class='val'>{{item.area}}平方米</view>
+    </view>
+    <view class='contracts-list' wx:if='{{item.code}}'>
+      <view class='key'>备案编号</view>
+      <view class='val'>{{item.code}}</view>
+    </view>
+    <view class='contracts-list' wx:if='{{item.pCode}}'>
+      <view class='key'>省级备案编号</view>
+      <view class='val'>{{item.pCode}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--setting/opinion/opinion.wxml 意见反馈-->
+<view class='opinion'>
+  <textarea placeholder='感谢您对我们的改进，我们将努力为您提供更好的服务' placeholder-class='all-input' value='{{input}}' maxlength='200' bindinput='checkNum'></textarea>
+  <view class='num'><text>{{nowNum}}</text>/{{maxNum}}</view>
+  <view class='send' bindtap='sendInput'>提交反馈</view>
+</view>

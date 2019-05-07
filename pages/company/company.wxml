@@ -1,0 +1,13 @@
+<!--pages/company/company.wxml-->
+<view class='company-list'>
+  <view wx:for='{{list}}' wx:key='{{item.id}}' class='list-item' bindtap='goDetail' data-name='{{item.name}}'>
+    <view class='title'>
+      {{item.name}}
+    </view>
+    <view class='num'>
+      <view>资质<text>{{item.qualifications.length}}</text>个</view>
+      <view>人员<text>{{item.personCount}}</text>个</view>
+      <view>项目<text>{{item.projectCount}}</text>个</view>
+    </view>
+  </view>
+</view>

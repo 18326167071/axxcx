@@ -1,0 +1,143 @@
+{
+  "pages": [
+    "pages/index/index",
+    "home/home/home",
+    "login/login/login",
+    "active/active/active",
+    "search/search/search",
+    "feed/feed/feed"
+  ],
+  "subPackages": [
+    {
+      "root": "setting",
+      "name": "setting",
+      "pages": [
+        "about/about",
+        "star/star",
+        "opinion/opinion",
+        "info/info",
+        "description/description",
+        "card/card"
+      ]
+    },
+    {
+      "root": "company",
+      "name": "company",
+      "pages": [
+        "search/search",
+        "list/list",
+        "detail/detail",
+        "tabs/tabs",
+        "certificate/certificate"
+      ]
+    },
+    {
+      "root": "project",
+      "name": "project",
+      "pages": [
+        "search/search",
+        "list/list",
+        "detail/detail"
+      ]
+    },
+    {
+      "root": "personnel",
+      "name": "personnel",
+      "pages": [
+        "search/search",
+        "list/list",
+        "detail/detail"
+      ]
+    },
+    {
+      "root": "credit",
+      "name": "credit",
+      "pages": [
+        "list/list",
+        "search/search",
+        "detail/detail"
+      ]
+    },
+    {
+      "root": "exposure",
+      "name": "exposure",
+      "pages": [
+        "list/list",
+        "detail/detail"
+      ]
+    },
+    {
+      "root": "notice",
+      "name": "notice",
+      "pages": [
+        "list/list",
+        "detail/detail",
+        "search/search"
+      ]
+    },
+    {
+      "root": "discredit",
+      "name": "discredit",
+      "pages": [
+        "list/list",
+        "detail/detail",
+        "search/search"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "__APP__"
+      ]
+    },
+    "home/home/home": {
+      "network": "all",
+      "packages": [
+        "setting"
+      ]
+    },
+    "active/active/active": {
+      "network": "all",
+      "packages": [
+        "discredit"
+      ]
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#44c98b",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "/static/icon/tab_bar_index_active.png",
+        "iconPath": "/static/icon/tab_bar_index.png"
+      },
+      {
+        "pagePath": "search/search/search",
+        "text": "组合查询",
+        "selectedIconPath": "/static/icon/tab_bar_search_active.png",
+        "iconPath": "/static/icon/tab_bar_search.png"
+      },
+      {
+        "pagePath": "home/home/home",
+        "text": "我的",
+        "selectedIconPath": "/static/icon/tab_bar_home_active.png",
+        "iconPath": "/static/icon/tab_bar_home.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于相关信息的精准推送"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<!--pages/notice/notice.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='notice'>
+  <view wx:for="{{list}}" wx-for-index="index" wx:key="index" bindtap="goDetail" data-id="{{item.id}}" class='notice-item'>
+    <view class='title'>{{filter.htmlStr(item.title)}}</view>
+    <view class='content' wx:if='{{item.biddingDate}}'>
+      <view class='key'>招标时间:</view>
+      <view class='val'>{{filter.timeStr(item.biddingDate)}}</view>
+    </view>
+  </view>
+</view>

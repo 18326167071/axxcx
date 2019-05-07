@@ -1,0 +1,119 @@
+/* setting/card/card.wxss */
+.card{
+  min-height: 100vh;
+  background-color: #f5f8fa;
+}
+.card>.list{
+  padding: 20rpx 30rpx 0;
+}
+.card>.list>.list-item{
+  width: 100%;
+  height: 180rpx;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.card>.list>.list-item>.bg{
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card>.list>.list-item>.icon{
+  display: block;
+  width: 96rpx;
+  height: 96rpx;
+  float: left;
+  margin: 42rpx 30rpx;
+  position: relative;
+  z-index: 1;
+}
+.card>.list>.list-item>.info{
+  float: left;
+  padding: 0 40rpx;
+  width: 454rpx;
+  margin-top: 50rpx;
+  position: relative;
+  z-index: 1;
+}
+.card>.list>.list-item>.info>.card-name{
+  line-height: 1;
+  font-size: 32rpx;
+  color: #333;
+  font-weight: bold;
+}
+.card>.list>.list-item>.info>.card-time{
+  line-height: 1;
+  font-size: 28rpx;
+  margin-top: 24rpx;
+  color: #999;
+}
+.card>.end{
+  margin-top: 40rpx;
+  display: flex;
+  justify-content: center;
+}
+.card>.end>.text{
+  color: #999;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  margin: 0 16rpx;
+}
+.card>.end>.start-line,.card>.end>.end-line{
+  width: 96rpx;
+  height: 2rpx;
+  background-color: #e9e9e9;
+  margin-top: 13rpx;
+}
+.card>.none{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.card>.none>image{
+  display: block;
+  width: 400rpx;
+  height: 256rpx;
+  margin: 200rpx auto 60rpx;
+}
+.card>.none>.end{
+  display: flex;
+  justify-content: center;
+}
+.card>.none>.end>.text{
+  color: #666;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  margin: 0 16rpx;
+}
+.card>.none>.end>.start-line,.card>.none>.end>.end-line{
+  width: 96rpx;
+  height: 2rpx;
+  background-color: #e9e9e9;
+  margin-top: 13rpx;
+}
+.card>.none>.bottom{
+  position: absolute;
+  bottom: 80rpx;
+  width: 100%;
+}
+.card>.none>.bottom>view{
+  margin-bottom: 20rpx;
+  color: #333;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 1;
+  width: 100%;
+}
+.card>.none>.bottom>view>text{
+  color: #3798D1;
+}
+.card>.none>.bottom>.gray{
+  color: #999;
+  font-size: 24rpx;
+}

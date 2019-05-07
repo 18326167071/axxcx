@@ -1,0 +1,397 @@
+.container{
+  min-height: 100vh;
+  background-color: #f5f8fa;
+}
+/* 顶部logo块 */
+.top{
+  height: 400rpx;
+  background-color: #44c98b;
+  overflow: hidden;
+}
+.top>image{
+  display: block;
+  width: 275rpx;
+  height: 104rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+}
+.top>.search{
+  width: 650rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-top: 40rpx;
+  border-radius: 4rpx;
+  text-align: center;
+}
+.top>.search>view{
+  margin: 0 auto;
+}
+.top>.search>view>text{
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #ccc;
+  padding-left: 30rpx;
+  position: relative;
+}
+.top>.search>view>text:before{
+  content: '|';
+  position: absolute;
+  font-size: 24rpx;
+  top: -24rpx;
+  left: 0;
+}
+.top>.search>view>image{
+  display: inline-block;
+  width: 28rpx;
+  height: 28rpx;
+  padding-right: 30rpx;
+  vertical-align: middle;
+}
+.top>.num{
+  margin-top: 40rpx;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 50rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.top>.num>.line{
+  width: 2rpx;
+  height: 30rpx;
+  background-color: #fff;
+  margin-top: 17rpx;
+}
+.top>.num>.num-item>text{
+  text-align: center;
+  color: #fff;
+}
+.top>.num>.num-item>.num{
+  font-size: 28rpx;
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+}
+.top>.num>.num-item>.text{
+  font-size: 24rpx;
+  display: block;
+  margin-top: 16rpx;
+  line-height: 1;
+}
+/* 中部导航条 */
+.nav{
+  height: 352rpx;
+  background-color: #fff;
+  overflow: hidden;
+}
+.nav>.nav-item{
+  margin-top: 40rpx;
+  height: 116rpx;
+  width: 25%;
+  float: left;
+}
+.nav>.nav-item>.nav-val>image{
+  display: block;
+  margin: 0 auto;
+  width: 76rpx;
+  height: 76rpx;
+  margin-bottom: 16rpx;
+}
+.nav>.nav-item:nth-child(4)>.nav-val>image{
+  display: block;
+  margin: 0 auto;
+  width: 76rpx;
+  height: 72rpx;
+  margin-bottom: 20rpx;
+}
+.nav>.nav-item:nth-child(6)>.nav-val>image{
+  display: block;
+  margin: 0 auto;
+  width: 80rpx;
+  height: 82rpx;
+  margin-bottom: 10rpx;
+}
+.nav>.nav-item:nth-child(7)>.nav-val>image{
+  display: block;
+  margin: 0 auto;
+  width: 72rpx;
+  height: 78rpx;
+  margin-bottom: 14rpx;
+}
+.nav>.nav-item:last-child>.nav-val>image{
+  display: block;
+  margin: 0 auto;
+  width: 72rpx;
+  height: 68rpx;
+  margin-bottom: 24rpx;
+}
+.nav>.nav-item>.nav-val>text{
+  text-align: center;
+  color: #999;
+  font-size: 24rpx;
+  display: block;
+  line-height: 1;
+}
+/* 推荐企业 */
+.company{
+  overflow: hidden;
+}
+.company>.title{
+  display: block;
+  line-height: 1;
+  font-size: 36rpx;
+  color: #333;
+  padding: 30rpx 0 30rpx 52rpx;
+  margin: 20rpx 0;
+  position: relative;
+  background-color: #fff;
+}
+.company>.title:before{
+  position: absolute;
+  content: "";
+  width: 6rpx;
+  height: 30rpx;
+  background-color: #44c98b;
+  top: 33rpx;
+  left: 30rpx;
+}
+.list-item{
+  height: 180rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+.list-item:last-child{
+  border-bottom: none;
+}
+.list-item>.title{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 1;
+  margin-top: 40rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.list-item>.title>image{
+  display: block;
+  float: left;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+.list-item>.num{
+  margin-top: 36rpx;
+}
+.list-item>.num>image{
+  display: block;
+  float: left;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.list-item>.num>view{
+  display: block;
+  float: left;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 1;
+}
+.list-item>.num>view:not(:nth-child(2)){
+  padding-left: 60rpx;
+}
+.list-item>.num>view>text{
+  color: #44c98b;
+  font-weight: bold;
+  font-size: 32rpx;
+  margin: 0 8rpx;
+}
+/* 触底提示 */
+.footer{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  padding: 60rpx 0 80rpx;
+  position: relative;
+}
+.footer:before{
+  content: '';
+  display: block;
+  width: 96rpx;
+  height: 2rpx;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: calc(50% - 11rpx);
+  left: calc(50% - 196rpx);
+}
+.footer:after{
+  content: '';
+  display: block;
+  width: 96rpx;
+  height: 2rpx;
+  background-color: #e9e9e9;
+  position: absolute;
+  top: calc(50% - 11rpx);
+  right: calc(50% - 196rpx);
+}
+/* 授权弹窗 */
+.container{
+  width: 100%;
+}
+.container.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.popup-box{
+  width: 600rpx;
+  height: 392rpx;
+  margin: 0 auto;
+  margin-top: 40%;
+  border-radius: 8rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+.popup-box .box-title{
+  line-height: 1;
+  font-size: 36rpx;
+  padding-top: 60rpx;
+  color: #333;
+  position: relative;
+  text-align: center;
+  padding-bottom: 10rpx;
+}
+.popup-box .box-title>image{
+  display: block;
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.popup-box>.btn,.popup-box>button{
+  width: 500rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  border-radius: 8rpx;
+  margin: 0 auto;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: center;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+.popup-box>button{
+  background-color: #51a938;
+  border-color: #51a938;
+  color: #fff;
+}
+.popup-box>.btn{
+  border: 2rpx solid #eaecee;
+  background-color: #f8f8f8;
+  overflow: hidden;
+  color: #666;
+}
+.popup-box>button>image{
+  display: block;
+  width: 40rpx;
+  height: 32rpx;
+  margin: 24rpx 20rpx;
+}
+.popup-box>.btn>image{
+  display: block;
+  width: 38rpx;
+  height: 38rpx;
+  margin: 21rpx 20rpx;
+}
+/* 会员卡弹窗 */
+.vip{
+  width: 100%;
+}
+.vip.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.vip-box{
+  width: 574rpx;
+  height: 626rpx;
+  margin: 0 auto;
+  margin-top: 20%;
+  position: relative;
+}
+.vip-box>image{
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.vip-box>.card-btn{
+  width: 430rpx;
+  height: 90rpx;
+  background-color: #44c98b;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+  color: #fff;
+  line-height: 90rpx;
+  text-align: center;
+  position: absolute;
+  bottom: 60rpx;
+  left: 72rpx;
+  letter-spacing: 2rpx;
+}
+.vip-box>.close-btn{
+  display: block;
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  left: 264rpx;
+  top: 686rpx;
+}
+/* 会员卡弹窗 */
+.done-vip{
+  width: 100%;
+}
+.done-vip.popup{
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.4);
+}
+.done-vip-box{
+  width: 540rpx;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 40rpx;
+  top: 300rpx;
+  position: absolute;
+  left: 105rpx;
+  box-sizing: border-box;
+}
+.done-vip-box>view{
+  font-size: 32rpx;
+  text-align: center;
+  color: #333;
+  line-height: 1.5;
+}
+.done-vip-box>.close-btn{
+  display: block;
+  width: 46rpx;
+  height: 46rpx;
+  position: absolute;
+  left: 50%;
+  margin-left: -23rpx;
+  top: 500rpx;
+}

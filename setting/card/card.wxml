@@ -1,0 +1,32 @@
+<!--setting/card/card.wxml 我的礼券-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='card'>
+  <view class='list' wx:if='{{cardList.length > 0}}'>
+    <view class='list-item' wx:for='{{cardList}}' wx:key='index'>
+      <image class='bg' src='/static/images/card_bg.png'></image>
+      <image class='icon' src='/static/icon/card_icon.png'></image>
+      <view class='info'>
+        <view class='card-name'>{{item.card_type_name}}</view>
+        <view class='card-time'>有效期：{{filter.timeStr(item.created_at)}} - {{filter.timeStr(item.expired_at)}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='none' wx:if='{{cardList.length == 0}}'>
+    <image src='/static/images/card_none.png'></image>
+    <view class='end'>
+      <view class='start-line'></view>
+      <view class='text'>还没有礼劵哦</view>
+      <view class='end-line'></view>
+    </view>
+    <!-- <view class='bottom'>
+      <view class='look'>关注<text>“鲸查”</text>公众号</view>
+      <view class='vip'>回复“会员”领取会员体验卡</view>
+      <view class='gray'>百万企业/人才数据信息免费查</view>
+    </view> -->
+  </view>
+  <view class='end' wx:if='{{cardList.length > 0 && showBottom}}'>
+    <view class='start-line'></view>
+    <view class='text'>没有更多礼劵</view>
+    <view class='end-line'></view>
+  </view>
+</view>

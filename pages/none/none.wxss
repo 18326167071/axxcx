@@ -1,0 +1,28 @@
+/* pages/none/none.wxss */
+.none{
+  width: 100vw;
+  background-color: #f5f8fa;
+  overflow-y: auto;
+}
+.none>image{
+  display: block;
+  width: 280rpx;
+  height: 212rpx;
+  margin: 160rpx auto 0;
+}
+.none>.no-message{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 60rpx;
+}
+.none>.concat-phone{
+  font-size: 28rpx;
+  color: #999;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.none>.concat-phone>text{
+  color: #44c98b;
+  text-decoration: underline;
+}

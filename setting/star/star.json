@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "我的收藏",
+  "navigationBarBackgroundColor": "#44c98b",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "none": "/pages/none/none"
+  }
+}

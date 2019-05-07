@@ -1,0 +1,46 @@
+/* setting/opinion/opinion.wxss */
+.all-input{
+  font-size: 24rpx;
+  color: #ccc;
+}
+.opinion{
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #fff;
+  position: relative;
+}
+.opinion>textarea{
+  width: 690rpx;
+  height: 460rpx;
+  display: block;
+  border-radius: 4rpx;
+  border: 1px solid #e9e9e9;
+  margin: 40rpx 30rpx 80rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+  color: #333;
+  font-size: 24rpx;
+  line-height: 1.5;
+}
+.opinion>.num{
+  color: #999;
+  font-size: 24rpx;
+  position: absolute;
+  right: 54rpx;
+  top: 452rpx;
+}
+.opinion>.num>text{
+  color: #69d4a2;
+}
+.opinion>.send{
+  width: 650rpx;
+  height: 92rpx;
+  border-radius: 4rpx;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 92rpx;
+  background-color: #69d4a2;
+  margin: 0 auto;
+}

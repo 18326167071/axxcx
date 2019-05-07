@@ -1,0 +1,18 @@
+<!--pages/biddings/biddings.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='biddings'>
+  <view class='biddings-item' wx:for='{{list}}' wx:for-index='index' wx:key='index'>
+    <view class='title'>
+      <view class='key'>{{item.unit}}</view>
+      <view class='val {{item.type=="设计"?"active-one":item.type=="勘察"?"active-two":item.type=="施工"?"active-three":item.type=="监理"?"active-four":""}}'>{{item.type}}</view>
+    </view>
+    <view class='list' wx:if='{{item.money}}'>
+      <view class='key'>金额:</view>
+      <view class='val'>{{item.money}}万元</view>
+    </view>
+    <view class='list' wx:if='{{item.activeTime}}'>
+      <view class='key'>时间:</view>
+      <view class='val'>{{filter.timeStr(item.activeTime)}}</view>
+    </view>
+  </view>
+</view>

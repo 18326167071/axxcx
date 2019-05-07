@@ -1,0 +1,40 @@
+<!--setting/info/info.wxml 个人信息-->
+<view class='info'>
+  <view class='list'>
+    <view class='list-item photo'>
+      <view class='name'>头像</view>
+      <image src='/static/icon/home_right_gray_arrow.png' class='arrow' bindtap='endPic'></image>
+      <image src='{{pic == "https://wx.jianct.com/images/head_images/"? "/static/icon/normal.png" : pic}}' bindtap='endPic' class='pic'></image>
+    </view>
+    <view class='list-item'>
+      <view class='name'>昵称</view>
+      <input value='{{name}}' bindblur='endName' class='content' placeholder='请填写您的昵称' placeholder-class='all-input'></input>
+    </view>
+    <view class='list-item'>
+      <view class='name'>会员信息</view>
+      <view class='vip-name'>{{isVip ? 'VIP会员' : '普通会员'}}</view>
+    </view>
+    <view class='list-item'>
+      <view class='name'>性别</view>
+      <picker bindchange='endSex' value='{{sexIndex}}' range='{{sex}}' class='content'>
+        <view class="picker">
+          {{sex[sexIndex]}}
+          <image src='/static/icon/home_right_gray_arrow.png' class='arrow'></image>
+        </view>
+      </picker>
+    </view>
+    <view class='list-item'>
+      <view class='name'>手机</view>
+      <image src='/static/icon/home_right_gray_arrow.png' class='arrow' bindtap='startMobile' wx:if='{{mobile == "去绑定"}}'></image>
+      <div class='content {{mobile&&mobile!="去绑定"?"disabled":""}}' bindtap='startMobile'>{{mobile}}</div>
+    </view>
+    <view class='list-item'>
+      <view class='name'>企业</view>
+      <input value='{{company}}' bindblur='endEnterpriseName' class='content' placeholder='请填写您的企业' placeholder-class='all-input'></input>
+    </view>
+    <view class='list-item'>
+      <view class='name'>职位</view>
+      <input value='{{job}}' bindblur='endJobName' class='content' placeholder='请填写您的职位' placeholder-class='all-input'></input>
+    </view>
+  </view>
+</view>

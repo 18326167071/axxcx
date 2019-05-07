@@ -1,0 +1,23 @@
+<!--pages/registerInfo/registerInfo.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='register'>
+  <view class='register-item' wx:for='{{list}}' wx:for-index='index' wx:key='index'>
+    <view class='title'>{{item.regCertificate}}</view>
+    <view class='list' wx:if='{{item.regType}}'>
+      <view class='key'>注册类别:</view>
+      <view class='val'>{{item.regType}}</view>
+    </view>
+    <view class='list' wx:if='{{item.code}}'>
+      <view class='key'>注册号:</view>
+      <view class='val'>{{item.code}}</view>
+    </view>
+    <view class='list' wx:if='{{item.endTime}}'>
+      <view class='key'>有效期:</view>
+      <view class='val'>{{filter.timeStr(item.endTime)}}</view>
+    </view>
+    <view class='list' wx:if='{{item.regUnit}}'>
+      <view class='key'>注册单位:</view>
+      <view class='val'>{{item.regUnit}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,27 @@
+<!--pages/person/person.wxml-->
+<view class='person'>
+  <view wx:for='{{list}}' wx:for-index='index' wx:key='index' class='person-item' bindtap='goDetail' data-item='{{item}}'>
+    <view class='title'>
+      <view class='key'>{{item.name}}</view>
+      <view class='val' wx:if='{{item.personMajors && item.personMajors[0].regCertificate}}'>{{item.personMajors[0].regCertificate}}</view>
+    </view>
+    <view class='content' wx:if='{{item.personMajors && item.personMajors[0].regType}}'>
+      <view class='key'>注册类别:</view>
+      <view class='val'>{{item.personMajors[0].regType}}</view>
+    </view>
+    <view class='content' wx:if='{{item.personMajors && item.personMajors[0].code}}'>
+      <view class='key'>注册号:</view>
+      <view class='val'>{{item.personMajors[0].code}}</view>
+    </view>
+    <view class='content' wx:if='{{item.personMajors && item.personMajors[0].regUnit}}'>
+      <view class='key'>注册单位:</view>
+      <view class='val'>{{item.personMajors[0].regUnit}}</view>
+    </view>
+  </view>
+  <view class='suggestion popup text' wx:if='{{isPublic}}'>
+    <view class='suggestion-box'>
+      <view class='title'>免费查询次数已用完，关注<text>“鲸查”微信</text>公众号，回复“会员”领取会员体验卡，百万企业/人才信息免费查</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closePublic'></image>
+    </view>
+  </view>
+</view>

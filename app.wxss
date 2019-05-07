@@ -1,0 +1,42 @@
+/**app.wxss**/
+.container{
+  font-family: 'pingfang';
+}
+view{
+  font-family: 'pingfang';
+}
+text{
+  font-family: 'pingfang';
+}
+/* 数据异常 */
+.feed{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 40rpx;
+  bottom: 100rpx;
+}
+.feed>image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* 联系客服 */
+.chat{
+  width: 110rpx;
+  height: 100rpx;
+  position: fixed;
+  right: 40rpx;
+  bottom: 280rpx;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.chat>image{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.chat::after{
+  border: none;
+} 

@@ -1,0 +1,52 @@
+/* pages/company/company.wxss */
+.list-item{
+  height: 180rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+  padding: 0 30rpx;
+  overflow: hidden;
+}
+.list-item>.title{
+  font-size: 32rpx;
+  color: #333;
+  line-height: 1;
+  margin-top: 40rpx;
+  width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+.list-item>.title>image{
+  display: block;
+  float: left;
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+.list-item>.num{
+  margin-top: 36rpx;
+  overflow: hidden;
+}
+.list-item>.num>image{
+  display: block;
+  float: left;
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 20rpx;
+}
+.list-item>.num>view{
+  display: block;
+  float: left;
+  font-size: 28rpx;
+  color: #999;
+  line-height: 1;
+}
+.list-item>.num>view:not(:first-child){
+  padding-left: 60rpx;
+}
+.list-item>.num>view>text{
+  color: #44c98b;
+  font-weight: bold;
+  font-size: 32rpx;
+  margin: 0 8rpx;
+}

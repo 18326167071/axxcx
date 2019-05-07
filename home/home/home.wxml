@@ -1,0 +1,79 @@
+<!--我的-->
+<view class='home'>
+  <!-- 我的主页头部信息栏 -->
+  <view class='top'>
+    <!--未登录头部-->
+    <view wx:if='{{!userInfo}}' class='no-message' bindtap='checkLogin'>
+      <image src='/static/icon/normal.png'></image>
+      <view class='info'>
+        <view class='title'>点击登录</view>
+        <view class='note'>登录查看更多信息</view>
+      </view>
+    </view>
+    <!--登录头部-->
+    <view wx:else class='message'>
+      <image src='{{userInfo.avatar_url == "https://wx.jianct.com/images/head_images/"? "/static/icon/normal.png" : userInfo.avatar_url}}' bindtap='getInfo'></image>
+      <view class='vip-name'>
+        <view class='name' bindtap='getInfo'>{{userInfo.nickname ? userInfo.nickname: '用户'}}</view>
+        <view class='look' wx:if='{{!userInfo.public_open_id && !userInfo.is_vip}}'>关注鲸查公众号免费升级会员</view>
+        <view class='vip {{userInfo.is_vip ? "active" : ""}}' wx:if='{{userInfo.public_open_id || userInfo.is_vip}}'>
+          {{userInfo.is_vip ? 'VIP会员' : '普通会员'}}
+        </view>
+      </view>
+      <view class='company' bindtap='getInfo'>
+        {{userInfo.enterprise_name ? userInfo.enterprise_name : '设置所在企业'}}
+        <image src='/static/icon/home_right_arrow.png'></image>
+      </view>
+    </view>
+  </view>
+  <!-- 我的主页设置列表 -->
+  <view class='item'>
+    <view wx:for="{{list}}" wx:key='{{item.type}}' class='list-item' data-type='{{item.type}}' bindtap='setting'>
+      <image src='{{item.icon}}'></image>
+      <text>{{item.text}}</text>
+      <image src='/static/icon/home_right_gray_arrow.png'></image>
+    </view>
+  </view>
+  <!-- 水印 -->
+  <view class='note-box'>
+    <image src='/static/images/public_180.png'></image>
+    <view>扫码关注鲸查</view>
+    <view>最新建筑资讯一手掌握</view>
+    <view>联系邮箱：jingchadata@163.com</view>
+  </view>
+  <!-- <view class='note-text phone'>服务热线：400-400-400</view> -->
+  <!-- 授权弹窗 -->
+  <view class='container popup' wx:if="{{loginPop}}">
+    <view class='popup-box'>
+      <view class='box-title'>
+        <text>登录或绑定</text>
+      </view>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">
+        <image src='/static/icon/icon_weixin.png'></image>
+        <text>微信账号快速登录</text>
+      </button>
+      <view class='btn' bindtap='goBind'>
+        <image src='/static/icon/icon_shouji_denglu.png'></image>
+        <text>手机号绑定</text>
+      </view>
+    </view>
+  </view>
+  <!-- 会员卡弹窗 -->
+  <view class='vip popup' wx:if='{{isVip && !loginPop}}'>
+    <view class='vip-box'>
+      <image src='/static/images/vip_popup.png'></image>
+      <view class='card-btn' bindtap='goCard'>查看我的礼劵</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closeVip'></image>
+    </view>
+  </view>
+  <!-- 会员卡过期弹窗 -->
+  <view class='done-vip popup' wx:if='{{isDoneVip}}'>
+    <view class='done-vip-box'>
+      <view>您的7天VIP会员体验卡已到期</view>
+      <view>因您是“鲸查”首批用户</view>
+      <view>我们已免费为您升级成会员</view>
+      <view>资质/项目/招标信息尽情查</view>
+      <image src='/static/icon/search_close.png' class='close-btn' bindtap='closeDoneVip'></image>
+    </view>
+  </view>
+</view>

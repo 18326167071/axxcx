@@ -1,0 +1,25 @@
+<!--setting/about/about.wxml关于我们-->
+<view class='about'>
+  <view class='top'>
+    <image src='/static/images/logo_normal.png'></image>
+    <view class='version'>v1.0 版本</view>
+  </view>
+  <view class='list'>
+    <view class='list-item' bindtap='goDescription'>
+      <view class='title'>功能介绍</view>
+      <image src='/static/icon/home_right_gray_arrow.png'></image>
+    </view>
+    <!-- <view class='list-item'>
+      <view class='title'>服务热线</view>
+      <view class='content' data-phone='400-400-400' bindtap='callPhone'>400-400-400</view>
+    </view>
+    <view class='list-item'>
+      <view class='title'>官方网站</view>
+      <view class='content'>http://xxxxx.com</view>
+    </view> -->
+    <view class='list-item'>
+      <view class='title'>公众号</view>
+      <view class='content'>鲸查</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,15 @@
+<!--pages/aptitude/aptitude.wxml-->
+<view class='aptitude'>
+  <view wx:for='{{list}}' wx:for-index='index' wx:key='index' class='aptitude-item' bindtap='goCertificate' data-index='{{index}}'>
+    <view class='title'>{{item.qualificationName}}</view>
+    <view class='content' wx:if='{{item.code}}'>
+      <view class='key'>资质证书号:</view>
+      <view class='val'>{{item.code}}</view>
+    </view>
+    <view class='content' wx:if='{{item.department}}'>
+      <view class='key'>发证机关:</view>
+      <view class='val'>{{item.department}}</view>
+    </view>
+    <view class='icon'>{{item.category}}</view>
+  </view>
+</view>

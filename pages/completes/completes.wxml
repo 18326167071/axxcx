@@ -1,0 +1,30 @@
+<!--pages/completes/completes.wxml-->
+<wxs src="../../utils/time.wxs" module="filter"/>
+<view class='completes'>
+  <view class='completes-box' wx:for='{{list}}' wx:for-index='index' wx:key='index'>
+    <view class='completes-list' wx:if='{{item.code}}'>
+      <view class='key'>备案编号</view>
+      <view class='val'>{{item.code}}</view>
+    </view>
+    <view class='completes-list' wx:if='{{item.pCode}}'>
+      <view class='key'>省级备案编号</view>
+      <view class='val'>{{item.pCode}}</view>
+    </view>
+    <view class='completes-list' wx:if='{{item.money}}'>
+      <view class='key'>实际造价</view>
+      <view class='val'>{{item.money}}万元</view>
+    </view>
+    <view class='completes-list' wx:if='{{item.area}}'>
+      <view class='key'>实际面积</view>
+      <view class='val'>{{item.area}}平方米</view>
+    </view>
+    <view class='completes-list' wx:if='{{item.realBegin}}'>
+      <view class='key'>开工日期</view>
+      <view class='val'>{{filter.timeStr(item.realBegin)}}</view>
+    </view>
+    <view class='completes-list' wx:if='{{item.realEnd}}'>
+      <view class='key'>竣工验收日期</view>
+      <view class='val'>{{filter.timeStr(item.realEnd)}}</view>
+    </view>
+  </view>
+</view>

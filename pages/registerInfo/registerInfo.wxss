@@ -1,0 +1,31 @@
+/* pages/registerInfo/registerInfo.wxss */
+.register-item{
+  padding: 30rpx;
+  border-bottom: 20rpx solid #f5f8fa;
+  background-color: #fff;
+}
+.register-item>.title{
+  font-size: 32rpx;
+  line-height: 1.5;
+  color: #333;
+  width: 100%;
+  margin-bottom: 20rpx;
+}
+.register-item>.list{
+  line-height: 1.5;
+  overflow: hidden;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.register-item>.list:last-child{
+  margin-bottom: 0;
+}
+.register-item>.list>.key{
+  float: left;
+  color: #999;
+  margin-right: 10rpx;
+}
+.register-item>.list>.val{
+  float: left;
+  color: #666;
+}

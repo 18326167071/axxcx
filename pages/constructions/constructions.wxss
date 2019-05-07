@@ -1,0 +1,24 @@
+/* pages/constructions/constructions.wxss */
+.constructions-item{
+  padding: 30rpx;
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+}
+.constructions-item>.list{
+  line-height: 1.5;
+  overflow: hidden;
+  font-size: 28rpx;
+  margin-bottom: 20rpx;
+}
+.constructions-item>.list:last-child{
+  margin-bottom: 0;
+}
+.constructions-item>.list>.key{
+  float: left;
+  color: #999;
+  margin-right: 10rpx;
+}
+.constructions-item>.list>.val{
+  float: left;
+  color: #666;
+}

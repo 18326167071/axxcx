@@ -1,0 +1,31 @@
+/* pages/notice/notice.wxss */
+.notice-item{
+  background-color: #fff;
+  border-bottom: 20rpx solid #f5f8fa;
+  padding: 30rpx;
+}
+.notice-item>.title{
+  font-size: 32rpx;
+  width: 100%;
+  color: #333;
+  line-height: 1.5;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+.notice-item>.content{
+  margin-top: 30rpx;
+  overflow: hidden;
+  font-size: 28rpx;
+  line-height: 1;
+}
+.notice-item>.content>.key{
+  color: #999;
+  float: left;
+  letter-spacing: 2rpx;
+  margin-right: 12rpx;
+}
+.notice-item>.content>.val{
+  color: #666;
+  float: left;
+}
